@@ -1,0 +1,54 @@
+.Workexp{
+    margin: 20px 0;
+    position: relative;
+}
+.Workexp h5{
+    font-size: 28px;
+    color: #fff;
+}
+
+.arrow-left,.arrow-right{
+    position: absolute;
+    top: 60%;
+    color: #c7f9cc;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.arrow-left span,.arrow-right span{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.arrow-left{
+    left:-50px
+}.arrow-right{
+    right: -50px;
+}
+.arrow-left:hover,.arrow-right:hover{
+   background-color: #c7f9cc;
+   color: #fff;
+   transform: scale(1.1);
+}
+
+@media screen and (max-width:768px){
+    .arrow-left span, .arrow-right span{
+    font-size: 20px;   
+}
+.arrow-left{
+    left:0;
+}.arrow-right{
+    right: 0;
+}
+.Workexp h5{
+    text-align: center;
+}
+}

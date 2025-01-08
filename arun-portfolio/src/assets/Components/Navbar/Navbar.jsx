@@ -1,26 +1,42 @@
-import React, { useState } from 'react';
-import './Navbar.css'; // Corrected import path
-import { RiCloseLine, RiMenu2Line } from '@remixicon/react';
+import React,{ useState } from 'react';
+import './Navbar.css'
+import Logo from '../../Images/Wolf.jpg'
+import Mobilenav from '../Mobile-nav/Mobilenav';
 
 const Navbar = () => {
-    const [menu,openMenu] = useState(true); 
-    const [showMenu,setshowMenu]=useState(false)
+ const [openmenu,setOpenmenu]=useState(false);
+ const togglemenu=()=>{
+     setOpenmenu(!openmenu);
+  }
+  return (
+    <>
+    <Mobilenav isOpened={openmenu} togglemenu={togglemenu}/>
+    <div className='nav-wrapper'>
+        <div className="nav-content">
+                <img className='Logosec' src={Logo} alt="" />
+                <ul>
+                    <li><a href="#Home" className='menuitem'>Home</a></li>
+                    <li><a href="#Skills" className='menuitem'> Skills</a></li>
+                    <li><a href="#Expirience" className='menuitem'> Expirience</a></li>
+                    <li><a href="#Contact Me"className='menuitem' > Contact Me</a></li>
+                    <button className='nav-mainbtn' >More Details</button>
+                    
+                </ul>
+                <button className="menu-btn" onClick={togglemenu}>
+               <span
+                className="material-symbols-outlined"
+                 style={{ fontSize: '25px' }}>
+                 {openmenu ? 'close': 'menu'}
+                </span>
+               </button>
 
-    return (
-        <div className="navbar"> {/* className instead of class */}
-            <ul className={menu ? "block" : "hide"}>
-                <a href="#About"><li>About</li></a>
-                <a href="#Experience"><li>Experience</li></a> {/* Corrected typo */}
-                <a href="#Projects"><li>Projects</li></a>
-                <a href="#Contact"><li>Contact</li></a>
-            </ul>
-            {showMenu ? (
-                <RiMenu2Line size={30} className='hamberger md:hidden' onClick={()=>{openMenu(!menu);setshowMenu(!showMenu)}} /> 
-            ) : (
-                <RiCloseLine size={30} className='hamberger close md:hidden' onClick={()=>{openMenu(!menu);setshowMenu(!showMenu)}} /> 
-            )}
-        </div>
-    );
-};
+            </div>
+      
+    </div>
+    </>
+    
+    
+  )
+}
 
-export default Navbar;
+export default Navbar

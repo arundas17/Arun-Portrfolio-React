@@ -1,33 +1,102 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  .navbar{
-    width: 75%;
-  }
-  .navbar ul{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-  }
-  .navbar ul li {
-    cursor: pointer;
-    list-style: none;
-    padding-right: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+
+
+/* /* .menu-btn .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-size: 25px; /* Adjust size if needed */
+
+
+
+
+
+.nav-wrapper{
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(50px);
+}
+.nav-content{
+  max-width: 1300px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  padding: 16px 0;
+  margin: 0 auto;
+}
+
+.Logosec{
+  width: 30px;
+}
+.nav-content ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.nav-content  li {
+  position: relative;
+  padding: 5px 0;
+  cursor: pointer;
+  list-style: none;
+  color: #fff;
+}
+
+.nav-content li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-content li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-content li:hover::after {
+  width: 100%;
+  cursor: pointer;
+}
+.nav-mainbtn{
+  padding: 9px 20px;
+  border-radius: 12px;
+  background-color: #c7f9cc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #000;
+  font-weight: 600;
+}
+.nav-mainbtn:hover{
+  background-color: #80ed99;
+  transform: scaleX(1.1);
+}
+.menu-btn{
+  display: none;
+}
+
+
+/* media qu */
+
+@media screen and (max-width:768px) {
+  .menu-btn{
+    display: block;
+    background-color: transparent;
+    outline: none;
+    border: none;
     color: #fff;
   }
-  .block{
+  .nav-content ul{
+    display: none
+  };
+  .menu-btn {
     display: block;
   }
-  .hamburger {
-    display: none; /* Hide by default */
-    cursor: pointer;
-  }
-  .hide {
-    visibility: hidden;
-  }
-  @media (max-width: 768px) {
-    .hamburger {
-      display: block; /* Show only on mobile screens */
-    }
-  }
+}
+
+
+

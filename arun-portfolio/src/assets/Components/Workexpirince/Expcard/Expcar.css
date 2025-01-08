@@ -1,0 +1,40 @@
+.expcard{
+    background-color: transparent;
+    border: 1px solid #c7f9cc;
+    border-radius: 20px;
+    padding: 20px;
+    color: #ffff;
+    margin: 10px;
+
+}
+
+.workduration{
+   background-color: #c7f9cc;
+   border-radius: 10px;
+   padding: 5px 10px;
+   display: inline-block;
+   color: #000;
+
+}
+.responsibility  li{
+    list-style: none;
+    position: relative;
+    margin-bottom: 15px;
+}
+.responsibility  li::after{
+    content: '';
+    position: absolute;
+    left: -20px;
+    background: #c7f9cc;
+    width: 9px;
+    height: 8px;
+    top: 2px;
+}
+
+@media screen and(max-width:768px){
+    .expcard{
+        width: 340px;
+        margin: 0 auto;
+        margin: 6px;
+    }
+}

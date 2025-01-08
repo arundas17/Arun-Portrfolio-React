@@ -1,0 +1,89 @@
+.mainsection-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.mainsection-content h2{
+    color: #fff;
+    font-size: 61px;
+    font-weight: bold;
+}
+
+.mainsection-content p{
+    color: #fff;
+    font-size: 20px;
+    padding-right: 12px;
+  }
+.mainsection-profilecard-main{
+    flex: 1;
+}
+.mainsetion-profilecard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+.mainsetion-profilecard div{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+
+.techitem {
+    width: auto;
+    height: 70px;
+    border: 1px solid #c7f9cc;
+    padding: 10px;
+}
+
+
+.mainsection-maintech img{
+  border-radius: 10px;
+  transition: all 0.3s ease; 
+  cursor: pointer;
+}
+.mainsection-maintech img:hover{
+    transform: translateY(-10px);
+}
+
+.mainsection-profilecard-arun{
+    width: 525px;
+    border-radius: 20px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+.mainsection-profilecard-arun:hover{
+  transform: translateY(-10px);
+}
+
+@media  screen and (max-width:768px) {
+    .mainsection-container{
+        flex-direction: column;
+    }
+    .mainsection-profilecard-arun{
+        width: 366px;
+    }
+    .mainsection-content h2{
+        font-size: 36px;
+        text-align: center;
+    }
+    .mainsection-content p{
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+    }
+    .mainsection-maintech{
+        flex-wrap: wrap;
+    }
+    .mainsetion-profilecard div{
+        justify-content: center;
+        align-items: center;
+    }
+    .mainsection-maintech div {
+        width: calc(100% /3);
+    }
+}
